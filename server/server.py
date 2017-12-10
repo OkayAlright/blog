@@ -32,7 +32,7 @@ def main_page():
     phrase = "Don't mistake the description of the city for the city itself. -Calvino"
     outer = Template(common_templates.template["header_and_title"])
 
-    single_page_black_list = ['resume', 'contact']
+    single_page_black_list = ['Resume', 'Contact']
     all_pages = [(item, item) for item in os.listdir('./pages')]
     post_pages = [item for item in all_pages if item[0] not in single_page_black_list]
     single_pages = [item for item in all_pages if item[0] in single_page_black_list]

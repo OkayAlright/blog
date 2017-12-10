@@ -1,7 +1,7 @@
 <div class="ten columns">
-    Name: Logan H. G. Davis
+    <p>Name: Logan H. G. Davis</p>
 
-    Email: logandavis@gmail.com
+    <p>Email: logandavis@gmail.com </p>
 
-    Github: <a href="https://github.com/OkayAlright"> OkayAlright </a>
+    <p>Github: <a href="https://github.com/OkayAlright"> OkayAlright </a> </p>
 </div>
