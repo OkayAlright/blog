@@ -1,0 +1,17 @@
+<div class="two columns">
+    {% for item in post_page_names %}
+    <div>
+        <a class="button" href='./pages/{{ item[1] }}'>
+            {{ item[0] }}
+        </a>
+    </div>
+    {% endfor %}
+    <hr>
+    {% for item in single_pages%}
+    <div>
+        <a class="button" href='./pages/{{ item[1] }}'>
+            {{ item[0] }}
+        </a>
+    </div>
+    {% endfor %}
+</div>

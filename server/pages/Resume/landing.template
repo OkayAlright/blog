@@ -1,0 +1,28 @@
+<div class="ten columns">
+    Name: Logan Davis
+    Interests: Programming, Research, Design
+    <hr>
+    Skills:
+    <ul>
+        <li>
+            Programming Languages:
+            <ul>
+                <li>Python *****</li>
+                <li>Racket ****</li>
+                <li>Bash   *****</li>
+                <li>Java   ****</li>
+                <li>Scala  ***</li>
+                <li>Javascript ***</li>
+                <li>Postgres ***</li>
+            </ul>
+        </li>
+        <li>
+            Frameworks:
+            <ul>
+                <li> Web development: Flask, Ionic </li>
+                <li> Mobile Development: Ionic </li>
+                <li> Compilers: BRAG </li>
+            </ul>
+        </li>
+    </ul>
+</div>

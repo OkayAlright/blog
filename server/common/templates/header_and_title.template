@@ -1,0 +1,24 @@
+<head>
+    <title>_Okay_Alright | {{ page_name }} </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='skeleton.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='normalize.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div>
+                <a href="/">
+                    <h1>_Okay_Alright | {{ page_name }} </h1>
+                </a>
+
+                <div id="phrase_bar"> {{ phrase }} </div>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            {{ middle_content }}
+        </div>
+    </div>
+</body>

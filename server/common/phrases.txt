@@ -1,0 +1,6 @@
+"Most of the biggest problems in software are problems of misconception." - Rich Hickey
+"Anybody who comes to you and says he has a perfect language is either naïve or a salesman." - Bjarne Stroustrup
+"If you think it's simple, then you have misunderstood the problem." - Bjarne Stroustrup
+"Simplicity is a great virtue but it requires hard work to achieve it and education to appreciate it." - Edsger Dijkstra
+"We must state relationships, not procedures." - Grace Hopper
+"The idea becomes a machine that makes the art." -Sol LeWitt

@@ -1,0 +1,8 @@
+<div class="ten columns">
+    {% for post in posts %}
+    <div>
+        {{ post }}
+    </div>
+    <hr>
+    {% endfor %}
+</div>
