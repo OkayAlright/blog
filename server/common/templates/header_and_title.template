@@ -6,16 +6,18 @@
 <body>
     <div class="container">
         <div class="row">
-            <div>
-                <a href="/">
-                    <h1> {{ display_name }} | {{ page_name }} </h1>
-                </a>
+            <a href="/">
+                <div id="banner">
+
+                    <div id="title"> {{ display_name }} <br>
+                                     <span id="sub"> {{ page_name }} </span>
+                    </div>
 
                 <div id="phrase_bar"> {{ phrase }} </div>
-                <hr>
-            </div>
+                </div>
+            </a>
         </div>
-        <div class="row">
+        <div class="row" id="content">
             {{ middle_content }}
         </div>
     </div>

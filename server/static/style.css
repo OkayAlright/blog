@@ -8,20 +8,33 @@
 .button {
     min-width: 100%;
     max-width: 100%;
+    border-radius: 0px;
+    border-color: #333;
+    color: white;
+}
+
+a.button:hover {
+    color: #f7d708;
+}
+
+#banner {
+    padding: 2%;
+    padding-top: 10%;
 }
 
 body {
-    background-color: black;
+    background-color: #000;
+    color: #333;
     margin:0;
     padding:0;
-    background-image: url("./images/background.jpg");
     background-size: cover;
 }
 
 .container {
-    background-color: rgba(255, 255, 255, 0.8);;
+    background-color: #f7d708;
     min-height: 100%;
-    padding: 5px;
+    width:100%;
+    max-width: 100%;
 }
 
 hr {
@@ -31,13 +44,61 @@ hr {
 html {
   margin:0;
   padding:0;
+  font-family: sans-serif;
+  text-size-adjust: 100%;
 }
 
 h1 {
-    color: black;
+    color: #333;
+}
 
+h2 {
+    color: #333;
+}
+
+#phrase_bar {
+    color: #333;
 }
 
 a {
     text-decoration: none;
+}
+
+#content {
+    background-color: white;
+    padding: 0%
+}
+
+#sidebar {
+    background-color: #333;
+    min-height: 380px;
+    max-height: 380px;
+    padding-top: 3%;
+}
+
+
+#title {
+    padding 5%;
+    font-size: 4em;
+    line-height: 1.0;
+    font-weight: bold;
+    color: #333;
+}
+
+#sub{
+    font-size: 3em;
+}
+
+@media (min-width: 550px){
+    #sidebar {
+        background-color: #333;
+        min-height: 100%;
+        max-height: 100%;
+        padding-top: 3%;
+    }
+
+    #content {
+        background-color: white;
+        padding: 2%
+    }
 }

@@ -1,4 +1,4 @@
-<div class="two columns">
+<div class="two columns" id="sidebar">
     {% for item in post_page_names %}
     <div>
         <a class="button" href='./pages/{{ item[1] }}'>
