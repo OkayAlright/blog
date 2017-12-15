@@ -94,13 +94,3 @@ def render_subpage(name):
                                                    single_pages=page_groups["single post"])+
                                         content.render(posts=formatted)),
                         url_for=url_for)
-
-
-
-
-
-
-
-
-
-
