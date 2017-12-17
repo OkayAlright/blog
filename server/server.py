@@ -18,6 +18,7 @@ from jinja2 import Template
 
 version = '0.1'
 app = Flask(__name__)
+app.base_url = os.path.dirname(os.path.realpath(__file__))
 
 
 class Config(object):
@@ -37,6 +38,12 @@ def get_random_quote():
         return quotes[random.randint(0,len(quotes))-1]
 
 
+def get_ignores():
+    with open('./common/ignores.txt', 'r') as file:
+        folders_to_ignore = file.read().split('\n')
+        return folders_to_ignore
+
+
 def format_post(post_markdown):
     return markdown.markdown(post_markdown)+'\n'
 
@@ -51,13 +58,16 @@ def separate_pages(all_pages_tuple):
     }
 
 
+def get_categorized_pages():
+    all_pages = [(item, '/pages/'+item) for item in os.listdir(app.base_url+'/pages')
+                 if item not in get_ignores()]
+    return separate_pages(all_pages)
+
+
 @app.route('/')
 def main_page():
     outer = Template(CommonTemplates.template["header_and_title"])
-
-    all_pages = [(item, item) for item in os.listdir('./pages')]
-    page_groups = separate_pages(all_pages)
-
+    page_groups = get_categorized_pages()
     content = Template(CommonTemplates.template["side_bar"])
 
     return outer.render(page_name=Config.server_config["Index Name"],
@@ -72,15 +82,14 @@ def render_subpage(name):
     outer = Template(CommonTemplates.template["header_and_title"])
     nav = Template(CommonTemplates.template["side_bar"])
 
+    page_groups = get_categorized_pages()
+
     if 'posts' in os.listdir('./pages/{}'.format(name)):
         posts = os.listdir('./pages/{}/posts'.format(name))
         unformatted_posts = [open('./pages/{}/posts/{}/post.md'.format(name, item)).read() for item in posts]
         formatted = [markdown.markdown(item) for item in unformatted_posts]
     else:
         formatted = []
-
-    all_pages = [(item, '../'+item) for item in os.listdir('./pages')]
-    page_groups = separate_pages(all_pages)
 
     if 'landing.template' not in os.listdir('./pages/{}/'.format(name)):
         content = Template(open('./common/templates/landing.template'.format(name), 'r').read())

@@ -10,7 +10,7 @@
                 <div id="banner">
 
                     <div id="title"> {{ display_name }} <br>
-                                     <span id="sub"> {{ page_name }} </span>
+                                     <span id="sub"></span>
                     </div>
 
                 <div id="phrase_bar"> {{ phrase }} </div>
@@ -21,4 +21,29 @@
             {{ middle_content }}
         </div>
     </div>
+    <script>
+    let tag_to_write = 'sub';
+    let title = '{{ page_name }}';
+
+    let blinkChar = (char, tag) => {
+        let text = document.getElementById(tag).innerHTML;
+        if(text[text.length-1] === char){
+            document.getElementById(tag).innerHTML = text.slice(0,-1);
+        } else {
+            document.getElementById(tag).innerHTML += char;
+        }
+    }
+
+    let typeWriter = (tag, str_to_place, index=0) => {
+        if (index < str_to_place.length) {
+            let text = document.getElementById(tag).innerHTML.slice(0,-1);
+            document.getElementById(tag).innerHTML = text + str_to_place.charAt(index) +'_';
+            setTimeout(function(){typeWriter(tag, str_to_place, (index+1))}, (Math.random()*500 + 100));
+        } else {
+             setInterval(function(){blinkChar('_',tag_to_write)}, 333);
+        }
+    }
+
+    typeWriter(tag_to_write, title);
+    </script>
 </body>
