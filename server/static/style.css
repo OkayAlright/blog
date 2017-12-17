@@ -11,6 +11,7 @@
     border-radius: 0px;
     border-color: #333;
     color: white;
+    padding:0px;
 }
 
 a.button:hover {
@@ -66,7 +67,7 @@ a {
 
 #content {
     background-color: white;
-    padding: 0%
+    padding: 0%;
 }
 
 #sidebar {
@@ -99,6 +100,6 @@ a {
 
     #content {
         background-color: white;
-        padding: 2%
+        margin-left: 0%;
     }
 }
