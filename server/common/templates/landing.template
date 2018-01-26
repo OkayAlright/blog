@@ -1,6 +1,6 @@
 <div class="ten columns">
     {% for post in posts %}
-    <div>
+    <div class="post">
         {{ post }}
     </div>
     <hr>
